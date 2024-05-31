@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"dht22\startup_stm32f103xb.o"
+"dht22\main.o"
+"dht22\stm32f1xx_it.o"
+"dht22\stm32f1xx_hal_msp.o"
+"dht22\stm32f1xx_hal_gpio_ex.o"
+"dht22\stm32f1xx_hal_tim.o"
+"dht22\stm32f1xx_hal_tim_ex.o"
+"dht22\stm32f1xx_hal.o"
+"dht22\stm32f1xx_hal_rcc.o"
+"dht22\stm32f1xx_hal_rcc_ex.o"
+"dht22\stm32f1xx_hal_gpio.o"
+"dht22\stm32f1xx_hal_dma.o"
+"dht22\stm32f1xx_hal_cortex.o"
+"dht22\stm32f1xx_hal_pwr.o"
+"dht22\stm32f1xx_hal_flash.o"
+"dht22\stm32f1xx_hal_flash_ex.o"
+"dht22\stm32f1xx_hal_exti.o"
+"dht22\system_stm32f1xx.o"
+--strict --scatter "dht22\dht22.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "dht22.map" -o dht22\dht22.axf
