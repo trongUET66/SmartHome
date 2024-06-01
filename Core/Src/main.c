@@ -237,7 +237,6 @@ void USART1_IRQHandler(void) {
 }
 
 static void MX_GPIO_Init(void) {
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
   // Enable GPIO Clocks
 	RCC->APB2ENR |= (1<<2) | (1<<3)|(1<<4)|(1<<5);
 
@@ -261,7 +260,6 @@ static void MX_GPIO_Init(void) {
 	GPIOA->ODR &= 0;
   GPIOC->ODR &= 0;
 	
-	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_RESET);
 	GPIOA->CRL &= ~(0xFFFFFFFF);   
 	GPIOA->CRL |= 0x33333333;     
 	GPIOA->ODR &= ~(0xFF); 
